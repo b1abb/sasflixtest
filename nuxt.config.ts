@@ -1,9 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@pinia/nuxt'],
   typescript: {
     typeCheck: true
-  }
+  },
+  srcDir: 'src/',
+  css: [
+    '~/assets/styles/fonts.scss'
+  ]
 })
