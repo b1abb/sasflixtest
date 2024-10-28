@@ -1,0 +1,54 @@
+.comment-item {
+    width: 676px;
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.return-button {
+    color: rgba(255, 107, 0, 1);
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255, 211, 179, 1);
+    font-family: "Regular", sans-serif;
+    margin-left: 8px;
+}
+.comment-user {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: "SF Pro Text Semibold", sans-serif;
+    font-size: 20px;
+    line-height: 0.7;
+    letter-spacing: -1px;
+}
+
+.comment-content {
+    margin-top: 0;
+    font-family: "SF Pro Text Regular", sans-serif;
+    font-size: 20px;
+    line-height: 0.7;
+    letter-spacing: -1px;
+    color: #05090E;
+    margin-bottom: 16px;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.comments-link {
+    color: rgba(255, 59, 48, 1);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(235, 87, 87, 1);
+    font-family: "SF Pro Text", sans-serif;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+}
+
+.date {
+    font-size: 14px;
+    color: rgba(4, 4, 5, 0.22);
+    font-family: "SF Pro Text", sans-serif;
+    letter-spacing: -0.08px;
+}

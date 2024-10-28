@@ -23,8 +23,9 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import type { Post } from '~/composables/postApi.ts';
 import ReactionButton from "~/components/ReactionButton.vue";
+import '~/assets/styles/components/PostItem.css';
+import type { Post } from "~/types";
 
 const props = defineProps({
   post: {
@@ -43,74 +44,3 @@ function setPostInStore() {
   postStore.setSelectedPost(props.post);
 }
 </script>
-
-<style scoped>
-.post-item {
-  width: 676px;
-  margin-bottom: 32px;
-}
-.post-title {
-  font-family: "SF Pro Text Bold", sans-serif;
-  font-size: 28px;
-  line-height: 0.7;
-  margin-top: 0;
-  letter-spacing: -1.45px;
-  color: #05090E;
-  margin-bottom: 16px;
-}
-.post-content {
-  font-family: "SF Pro Text Regular", sans-serif;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: -1px;
-  color: #05090E;
-  margin-bottom: 24px;
-}
-.post-actions {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  gap: 8px;
-}
-.buttons {
-  display: flex;
-  gap: 1px;
-}
-.comments-link {
-  color: #FF6B00;
-  text-decoration: none;
-  font-size: 14px;
-  border-bottom: 1px solid rgba(255, 107, 0, 0.3);
-  font-family: "SF Pro Text", sans-serif;
-  letter-spacing: -0.08px;
-}
-.date {
-  font-size: 14px;
-  color: rgba(4, 4, 5, 0.22);
-  font-family: "SF Pro Text", sans-serif;
-  letter-spacing: -0.08px;
-}
-.post-tags {
-  display: flex;
-  gap: 8px;
-}
-.tag {
-  font-family: "SF Pro Text", sans-serif;
-  letter-spacing: -0.08px;
-  display: inline-block;
-  color: black;
-  font-size: 14px;
-  background: #f1f1f1;
-  height: 18px;
-  padding-right: 4px;
-  padding-left: 4px;
-  position: relative;
-  border-radius: 4px;
-  text-decoration: none;
-}
-.tag:first-of-type {
-  padding-right: 4px;
-  padding-left: 11px;
-  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
-}
-</style>

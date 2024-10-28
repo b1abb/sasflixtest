@@ -1,44 +1,6 @@
 import { ref } from 'vue';
+import type { ApiResponse, ApiResponseComments, CommentOfPost, Post } from "~/types";
 
-export type Post = {
-    id: number;
-    title: string;
-    body: string;
-    tags: string[];
-    reactions: {
-        likes: number;
-        dislikes: number;
-    };
-    views: number;
-    userId: number;
-}
-
-export type Comment = {
-    id: number;
-    body: string;
-    postId: number;
-    likes: number;
-    dislikes?: number;
-    user: {
-        id: number;
-        username: string;
-        fullName: string;
-    };
-};
-
-interface ApiResponse {
-    posts: Post[];
-    total: number;
-    skip: number;
-    limit: number;
-}
-
-interface ApiResponseComments {
-    comments: Comment[];
-    total: number;
-    skip: number;
-    limit: number;
-}
 export function usePosts() {
     const posts: Ref<Post[]> = ref([]);
     const loading: Ref<boolean> = ref(true);
@@ -60,7 +22,7 @@ export function usePosts() {
 }
 
 export function useComments(postId: number) {
-    const comments: Ref<Comment[]> = ref([]);
+    const comments: Ref<CommentOfPost[]> = ref([]);
     const loading: Ref<boolean> = ref(true);
     const error: Ref<Error | null> = ref(null);
     const total: Ref<number> = ref(0);

@@ -1,0 +1,19 @@
+.title-comment{
+    font-family: "SF Pro Text Bold", sans-serif;
+    font-size: 28px;
+    line-height: 0.7;
+    margin-top: 42px;
+    letter-spacing: -1.45px;
+}
+.comments-list {
+    padding: 0;
+}
+.no-comments {
+    margin-top: 0;
+    font-family: "SF Pro Text Regular", sans-serif;
+    font-size: 20px;
+    line-height: 0.7;
+    letter-spacing: -1px;
+    color: #05090E;
+    margin-bottom: 16px;
+}

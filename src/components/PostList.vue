@@ -1,5 +1,5 @@
 <template>
-  <div class="post-list">
+  <div>
     <PostItem v-for="post in posts" :key="post.id" :post="post" />
   </div>
 </template>
@@ -15,6 +15,3 @@ onMounted(() => {
   fetchPosts();
 });
 </script>
-
-<style scoped>
-</style>

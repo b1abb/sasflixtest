@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   srcDir: 'src/',
   css: [
-    '~/assets/styles/fonts.scss'
+    '~/assets/styles/fonts.scss',
+    '~/assets/styles/layout.css',
   ]
 })

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import type { Post } from '~/composables/postApi';
+import type { Post } from "~/types";
 
 export const usePostStore = defineStore('post', () => {
     const selectedPost = ref<Post | null>(null);

@@ -38,11 +38,4 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.comments-page {
-  width: 676px;
-  margin: 0;
-}
-.post-reactions span {
-  margin-right: 12px;
-}
 </style>
