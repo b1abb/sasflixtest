@@ -4,7 +4,7 @@
       <img src="~/public/icons/avatar.svg" alt="avatar">
     </div>
     <div class="content">
-      <p class="comment-user">{{ comment.user.fullName }}<span>(@{{ comment.user.username }})</span></p>
+      <p class="comment-user">{{ comment.user.fullName }}</p>
       <p class="comment-content">{{ comment.body }}</p>
       <div class="comment-actions">
         <span class="date">Today</span>
