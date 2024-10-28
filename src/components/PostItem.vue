@@ -7,7 +7,12 @@
         <ReactionButton :count="post.reactions.likes" type="like" :postId="post.id" />
         <ReactionButton :count="post.reactions.dislikes" type="dislike" :postId="post.id" />
       </div>
-      <a href="#" class="comments-link">Open comments</a>
+      <router-link v-if="showCommentsLink"
+                   :to="`/posts/${post.id}/comments`"
+                   class="comments-link"
+                   @click="setPostInStore">
+        Open comments
+      </router-link>
       <span class="date">Today</span>
       <div class="post-tags">
         <span v-for="tag in post.tags" :key="tag" class="tag">{{ tag }}</span>
@@ -25,8 +30,18 @@ const props = defineProps({
   post: {
     type: Object as PropType<Post>,
     required: true
+  },
+  showCommentsLink: {
+    type: Boolean,
+    default: true
   }
 });
+
+const postStore = usePostStore();
+
+function setPostInStore() {
+  postStore.setSelectedPost(props.post);
+}
 </script>
 
 <style scoped>

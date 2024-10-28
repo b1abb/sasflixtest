@@ -13,6 +13,19 @@ export type Post = {
     userId: number;
 }
 
+export type Comment = {
+    id: number;
+    body: string;
+    postId: number;
+    likes: number;
+    dislikes?: number;
+    user: {
+        id: number;
+        username: string;
+        fullName: string;
+    };
+};
+
 interface ApiResponse {
     posts: Post[];
     total: number;
@@ -20,6 +33,12 @@ interface ApiResponse {
     limit: number;
 }
 
+interface ApiResponseComments {
+    comments: Comment[];
+    total: number;
+    skip: number;
+    limit: number;
+}
 export function usePosts() {
     const posts: Ref<Post[]> = ref([]);
     const loading: Ref<boolean> = ref(true);
@@ -41,15 +60,17 @@ export function usePosts() {
 }
 
 export function useComments(postId: number) {
-    const comments: Ref<any[]> = ref([]);
+    const comments: Ref<Comment[]> = ref([]);
     const loading: Ref<boolean> = ref(true);
     const error: Ref<Error | null> = ref(null);
+    const total: Ref<number> = ref(0);
 
     const fetchComments = async (): Promise<void> => {
         try {
             const response: Response = await fetch(`https://dummyjson.com/posts/${postId}/comments`);
-            const data = await response.json();
+            const data: ApiResponseComments = await response.json();
             comments.value = data.comments;
+            total.value = data.total
         } catch (err) {
             error.value = err instanceof Error ? err : new Error(String(err));
         } finally {
@@ -57,5 +78,5 @@ export function useComments(postId: number) {
         }
     };
 
-    return { comments, loading, error, fetchComments };
+    return { comments, loading, error, fetchComments, total };
 }

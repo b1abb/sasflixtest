@@ -17,12 +17,4 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.post-list {
-  //max-width: 800px;
-  //margin: 0 auto;
-  //padding: 16px;
-  //display: flex;
-  //flex-direction: column;
-  //gap: 24px;
-}
 </style>
