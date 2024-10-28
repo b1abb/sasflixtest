@@ -42,30 +42,7 @@ onMounted(() => {
   width: 676px;
   margin: 0;
 }
-.post {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-}
-.post-tags {
-  margin-top: 8px;
-}
-.tag {
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 12px;
-  margin-right: 6px;
-  color: #666;
-}
 .post-reactions span {
   margin-right: 12px;
-}
-.comments-list {
-  width: 687px;
-}
-.comment-item {
-  border-bottom: 1px solid #ddd;
-  padding: 8px 0;
 }
 </style>

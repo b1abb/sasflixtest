@@ -69,13 +69,13 @@ const buttonTypeClass = computed(() => (props.type === 'like' ? 'left-rounded' :
 }
 
 .left-rounded {
-  border-top-left-radius: 13.5px;
-  border-bottom-left-radius: 13.5px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 .right-rounded {
-  border-top-right-radius: 13.5px;
-  border-bottom-right-radius: 13.5px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
 
 .left-rounded.liked {
